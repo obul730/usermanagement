@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Registration Page</title>
+</head>
+<body>
+	<h1>Welcome to User Registration Page</h1>
+
+	<form action="/ServeletPractice/register/user" method="post">
+		<label for="first">First Name:</label> 
+		<input type="text" id="first"
+			name="first" placeholder="Enter your first name" required> <br>
+		<label for="last">Last Name:</label> 
+		<input type="text" id="last"
+			name="last" placeholder="Enter your last name" required> <br>
+		<label for="email">Email:</label>
+		<input type="email" id="email"
+			name="email" placeholder="Enter your email" required><br> 
+		<label for="dob">Date of Birth:</label>
+		<input type="date" id="dob"
+			name="dob" placeholder="Enter your DOB" required> <br>
+		<label for="password">Password:</label>
+		 <input type="password" id="password"
+			name="password" placeholder="Enter your password"
+			pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$" required
+			title="Password must contain at least one number,  
+                       one alphabet, one symbol, and be at  
+                       least 8 characters long"><br>
+
+		<label for="repassword">Re-type Password:</label>
+		 	<input
+			type="password" id="repassword" name="repassword"
+			placeholder="Re-Enter your password" required> <span id="pass"></span><br>
+			 
+		<label for="mobile">Contact:</label> 
+			<input type="text" id="mobile" name="mobile" placeholder="Enter your Mobile Number" required maxlength="10"><br>
+
+		<label for="gender">Gender:</label> 
+		<select id="gender" name="gender"
+			required>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		</select><br>
+
+	<input type="submit" value="Register">
+	</form>
+
+	<a href="/ServeletPractice/home">HomePage</a>
+	<a href="/ServeletPractice/dashboard">DashBoard</a>
+	<!-- <a href="/ServeletPractice/register/user">UserRegister</a>
+	<a href="/ServeletPractice/register/admin">AdminRegister</a> -->
+	<a href="/ServeletPractice/register?userType=user">UserRegister</a>
+	<a href="/ServeletPractice/register?userType=admin">AdminRegister</a>
+</body>
+</html>
